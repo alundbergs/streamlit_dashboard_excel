@@ -2,6 +2,7 @@
 import pandas as pd  # pip install pandas openpyxl
 import plotly.express as px  # pip install plotly-express
 import streamlit as st  # pip install streamlit
+import streamlit.components.v1 as components
 
 
 
@@ -79,7 +80,7 @@ with left_column:
     st.subheader(f"US $ {total_sales:,}")
 with middle_column:
     st.subheader("Average Rating:")
-    st.subheader(f"{average_rating} {star_rating}")
+    st.subheader(f"{average_rating}")
 with right_column:
     st.subheader("Average Sales Per Transaction:")
     st.subheader(f"US $ {average_sale_by_transaction}")
@@ -137,5 +138,9 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.dataframe(df_selection)
+components.iframe("https://panoraven.com/en/embed/ET9GtvfBQI", width=1200, height=1000)
+components.iframe("https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/xz9J05n/360view.jpg", width=1200, height=700)
+
+
 
 
