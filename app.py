@@ -63,7 +63,7 @@ df_selection = df.query(
 
 #---------MAINPAGE---------
 
-st.title(":bar_chart: Sales Dashboard")
+st.title(":bar_chart: Product Dashboard")
 st.markdown("##")
 
 #Top KPI
