@@ -138,7 +138,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.dataframe(df_selection)
-components.iframe("https://panoraven.com/en/embed/ET9GtvfBQI", width=1200, height=1000)
+components.iframe("http://www.nmusafvirtualtour.com/cockpits/P_tour/P-13.html", width=1200, height=1000)
 components.iframe("https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/xz9J05n/360view.jpg", width=1200, height=700)
 
 
