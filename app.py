@@ -8,7 +8,7 @@ import streamlit.components.v1 as components
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(
-    page_title="Sales Dashboard",
+    page_title="Product Dashboard",
     page_icon=":bar_chart:",
     layout="wide"
 )
@@ -138,8 +138,8 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.dataframe(df_selection)
-components.iframe("http://www.nmusafvirtualtour.com/cockpits/P_tour/P-13.html", width=1200, height=1000)
-components.iframe("https://www.vip-studio360.fr/galerie360/visites/vv-schneider-electric/vv-horizon-en-c.html?s=pano89&h=11.5417&v=5.3129&f=74.3802&skipintro&norotation", width=1200, height=700)
+components.iframe("https://www.vip-studio360.fr/galerie360/visites/vv-schneider-electric/vv-horizon-en-c.html?s=pano89&h=11.5417&v=5.3129&f=74.3802&skipintro&norotation", width=1200, height=1000)
+components.iframe("https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/xz9J05n/360view.jpg", width=1200, height=700)
 #https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/xz9J05n/360view.jpg
 
 
