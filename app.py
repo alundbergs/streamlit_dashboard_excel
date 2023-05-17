@@ -95,9 +95,9 @@ st.markdown("""---""")
 ####
 
 # # SALES BY PRODUCT LINE [BAR CHART]
-sales_by_product_line = (
-    df_selection.groupby(by=["Product line"]).sum()
-)
+#sales_by_product_line = (
+#    df_selection.groupby(by=["Product line"]).sum()
+#)
 # fig_product_sales = px.bar(
 #     sales_by_product_line,
 #     x="Total",
