@@ -63,7 +63,8 @@ df_selection = df.query(
 
 #---------MAINPAGE---------
 
-st.title(":bar_chart: Product Dashboard")
+#st.title(":bar_chart: Product Dashboard")
+st.title("Product Dashboard")
 st.markdown("##")
 
 #Top KPI
@@ -88,46 +89,55 @@ with right_column:
 st.markdown("""---""")
 
 
-# SALES BY PRODUCT LINE [BAR CHART]
-sales_by_product_line = (
-    df_selection.groupby(by=["Product line"]).sum()[["Total"]].sort_values(by="Total")
-)
-fig_product_sales = px.bar(
-    sales_by_product_line,
-    x="Total",
-    y=sales_by_product_line.index,
-    orientation="h",
-    title="<b>Sales by Product Line</b>",
-    color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
-    template="plotly_white",
-)
+####
+##Commented below
+####
+# 
+# 
+# # SALES BY PRODUCT LINE [BAR CHART]
+# sales_by_product_line = (
+#     df_selection.groupby(by=["Product line"]).sum()[["Total"]].sort_values(by="Total")
+# )
+# fig_product_sales = px.bar(
+#     sales_by_product_line,
+#     x="Total",
+#     y=sales_by_product_line.index,
+#     orientation="h",
+#     title="<b>Sales by Product Line</b>",
+#     color_discrete_sequence=["#0083B8"] * len(sales_by_product_line),
+#     template="plotly_white",
+# )
+# 
+# # st.plotly_chart(fig_product_sales)
+# 
+# 
+# # SALES BY HOUR [BAR CHART]
+# sales_by_hour = df_selection.groupby(by=["hour"]).sum()[["Total"]]
+# fig_hourly_sales = px.bar(
+#     sales_by_hour,
+#     x=sales_by_hour.index,
+#     y="Total",
+#     title="<b>Sales by hour</b>",
+#     color_discrete_sequence=["#0083B8"] * len(sales_by_hour),
+#     template="plotly_white",
+# )
+# 
+# fig_hourly_sales.update_layout(
+#     xaxis=dict(tickmode="linear"),
+#     plot_bgcolor="rgba(0,0,0,0)",
+#     yaxis=(dict(showgrid=False)),
+# )
+# 
+# # st.plotly_chart(fig_hourly_sales)
+# 
+# 
+# left_column, right_column = st.columns(2)
+# left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
+# right_column.plotly_chart(fig_product_sales, use_container_width=True)
 
-# st.plotly_chart(fig_product_sales)
-
-
-# SALES BY HOUR [BAR CHART]
-sales_by_hour = df_selection.groupby(by=["hour"]).sum()[["Total"]]
-fig_hourly_sales = px.bar(
-    sales_by_hour,
-    x=sales_by_hour.index,
-    y="Total",
-    title="<b>Sales by hour</b>",
-    color_discrete_sequence=["#0083B8"] * len(sales_by_hour),
-    template="plotly_white",
-)
-
-fig_hourly_sales.update_layout(
-    xaxis=dict(tickmode="linear"),
-    plot_bgcolor="rgba(0,0,0,0)",
-    yaxis=(dict(showgrid=False)),
-)
-
-# st.plotly_chart(fig_hourly_sales)
-
-
-left_column, right_column = st.columns(2)
-left_column.plotly_chart(fig_hourly_sales, use_container_width=True)
-right_column.plotly_chart(fig_product_sales, use_container_width=True)
+####
+##Commented
+####
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
@@ -137,7 +147,8 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-st.dataframe(df_selection)
+#uncomment below
+#st.dataframe(df_selection)
 components.iframe("https://www.vip-studio360.fr/galerie360/visites/vv-schneider-electric/vv-horizon-en-c.html?s=pano89&h=11.5417&v=5.3129&f=74.3802&skipintro&norotation", width=800, height=700)
 #components.iframe("https://sketchfab.com/models/93ff8a41c67e4750a02d44d191f898fe/embed?autostart=1", width=1000, height=800)
 #components.iframe("https://sketchfab.com/models/b1b0c15b3e2c4a42ac47ba196277d0da/embed?autostart=1", width=1000, height=800)
