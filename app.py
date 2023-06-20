@@ -139,8 +139,12 @@ st.markdown("""---""")
 ####
 ##Commented
 ####
+d = {'Month':[1,2,3,4,5,6,7,8,9,10,11],
+     'Customer':[47733,38777,44404,46296,38471,29788,19247,23273,20146,19315,20481],
+     'Vendor':[3767,2796,2973,3448,2824,1816,1057,1630,1587,1311,1579]}
 
-st.line_chart(df, x='Rating')
+newdf = pd.DataFrame(data = d)
+st.line_chart(newdf, x='Month')
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
