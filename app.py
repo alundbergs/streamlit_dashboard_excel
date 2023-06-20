@@ -140,6 +140,8 @@ st.markdown("""---""")
 ##Commented
 ####
 
+st.line_chart(df, x='Rating')
+
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
             <style>
