@@ -78,13 +78,13 @@ average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:
-    st.subheader("Total Sales:")
+    st.subheader("Total Amount:")
     st.subheader(f"US $ {total_sales:,}")
 with middle_column:
     st.subheader("Average Rating:")
     st.subheader(f"{average_rating}")
 with right_column:
-    st.subheader("Average Sales Per Transaction:")
+    st.subheader("Average Amount Per Transaction:")
     st.subheader(f"US $ {average_sale_by_transaction}")
 
 st.markdown("""---""")
@@ -156,7 +156,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 
 st.dataframe(df_selection)
-components.iframe("https://www.vip-studio360.fr/galerie360/visites/vv-schneider-electric/vv-horizon-en-c.html?s=pano89&h=11.5417&v=5.3129&f=74.3802&skipintro&norotation", width=800, height=700)
+components.iframe("https://www.vip-studio360.fr/galerie360/visites/vv-schneider-electric/vv-horizon-en-c.html?s=pano89&h=11.5417&v=5.3129&f=74.3802&skipintro&norotation", width=1500, height=700)
 #components.iframe("https://sketchfab.com/models/93ff8a41c67e4750a02d44d191f898fe/embed?autostart=1", width=1000, height=800)
 #components.iframe("https://sketchfab.com/models/b1b0c15b3e2c4a42ac47ba196277d0da/embed?autostart=1", width=1000, height=800)
 #components.iframe("https://renderstuff.com/tools/360-panorama-web-viewer-embed/?image=https://i.ibb.co/xz9J05n/360view.jpg", width=1200, height=700)
